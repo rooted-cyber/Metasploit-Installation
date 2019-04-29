@@ -77,8 +77,9 @@ echo " "
 echo "$g Ab metasploit install ho rha hai $g"
 echo " "
 echo "$y Installing.......... $y"
-apt install unstable-repo
-apt install metasploit
+apt-get install unstable-repo
+apt-get install metasploit
+termux-media-player stop
 echo " "
 figlet METASPLOIT
 figlet INSTALLED
