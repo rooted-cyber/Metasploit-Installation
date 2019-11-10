@@ -3,26 +3,22 @@ g='\033[1:93m'
 y='\033[1;93m'
 echo " "
 echo -e "\e[1;92m"
-pkg install figlet
 figlet METASPLOIT
 figlet MENU
+echo
 echo '1.Install metasploit '
 echo '2.Install metasploit and play mp3 '
 echo '3.exit '
 echo
-echo -e "\e[1;34m"
-read -p 'select_option >' opt
-echo -e "\e[1;33m"
-
-if [ $opt -eq 1 ];then
+echo -e -n "$lal select "
+read a
+if [ "$a" = "1" ];then
 echo " "
 echo " "
 echo "$g Installing ........... $g"
-apt update
-apt upgrade
-pkg install php
-pkg install curl
-pkg install wget
+cd $PREFIX/bin
+rm -f msf*
+cd ~
 echo " "
 clear
 figlet Metasploit
@@ -32,6 +28,8 @@ echo " "
 echo "$y Ab metasploit Install hone ja rha hai $y"
 echo " "
 echo "$y Installing.......... $y"
+apt update
+apt upgrade
 apt install unstable-repo
 apt install metasploit
 echo " "
@@ -41,42 +39,35 @@ figlet INSTALLED
 echo " "
 echo "$y Metasploit install ho gya hai $y"
 fi
-if [ $opt -eq 2 ];then
+if [ "$a" = "2" ];then
 echo " "
 echo " "
 echo "$g Installing ........... $g"
-apt update
-apt upgrade
-pkg install figlet
-pkg install php
-pkg install curl
-pkg install wget
-pkg install termux-api
+echo
+echo "\033[92m First install termux-api app from play store"
+echo
+echo
+echo "If already install Termux-api app then press enter"
+read
+cd $PREFIX/bin
+rm -f msf*
+cd ~
 echo " "
 clear
 figlet METASPLOIT
 figlet INSTALLATION
 figlet AND PLAY SONG
-sleep 7
-echo " "
-echo " "
-echo
-echo "$y Ab metasploit Install hone ja rha hai $y"
-echo " "
-echo "$y Termux-Api Install karo $y"
-echo " "
-echo "$y Play store me hai $y"
-echo " "
-echo "$y Termux-Api ke bina song nhi bajega$y"
-echo " "
-echo "$y Agr Install hai to play hone wala hai ab $yy"
-echo " "
 sleep 2
-termux-media-player play song.mp3
-echo " "
-echo "$g Ab metasploit install ho rha hai $g"
-echo " "
-echo "$y Installing.......... $y"
+clear
+echo -e "\033[93m"
+echo "Now Installing......"
+echo
+echo "Copy any song in /sdcard"
+echo
+echo "Copied song press enter for play and Installing....."
+read
+termux-media-player /sdcard/*.mp3
+clear
 apt-get install unstable-repo
 apt-get install metasploit
 termux-media-player stop
@@ -86,7 +77,7 @@ figlet INSTALLED
 echo " "
 echo "$g Metasploit Install Ho gya hai $g"
 fi
-if [ $opt -eq 1 ];then
+if [ "$a" = "3" ];then
 exit
 exit
 exit
