@@ -87,8 +87,23 @@ curl -LO https://github.com/termux/termux-packages/files/3995119/metasploit_5.0.
 gunzip metasploit_5.0.65-1_all.deb.gz
 dpkg -i metasploit_5.0.65-1_all.deb
 apt -f install
+pkg install metasploit
+apt --fix-broken install
 clear
 fi
+rep
+metasploit_install () {
+	cd ~
+curl -LO https://github.com/termux/termux-packages/files/3995119/metasploit_5.0.65-1_all.deb.gz
+gunzip metasploit_5.0.65-1_all.deb.gz
+dpkg -i metasploit_5.0.65-1_all.deb
+apt -f install
+pkg install metasploit
+apt --fix-broken install
+clear
+rep
+}
+rep () {
 cd $PREFIX/bin
 if [ -e msfconsole ];then
 printf "\n\n\033[92m [√] Successfully ,Metasploit installed\n\n"
@@ -97,5 +112,11 @@ exit 0
 else
 clear
 printf "\n\n \033[91m Sorry , Metasploit is not installed , Try again \n\n"
-exit 0
 fi
+echo -e -n "\n \033[93m Try again ? \033[91m (\033[92m Y/N\033[91m )  "
+read a
+case $a in
+y|Y)metasploit_install ;;
+n|N))exit 0 ;;
+esac
+}
