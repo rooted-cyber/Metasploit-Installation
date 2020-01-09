@@ -74,9 +74,6 @@ dpkg --configure -a
 clear
 msfconsole
 }
-Happy
-printf "Press enter to install metasploit "|lolcat
-read
 clear
 figlet Metasploit | toilet -f term -F gay
 figlet Installation | toilet -f term -F gay
@@ -89,8 +86,9 @@ printf "\n\n\033[92m [√] Metasploit is already installed !!\n\n"
 printf "\n \033[91m [×] If any error type\033[92m Y\033[91m or Not error type \033[92m N "
 fixing
 else
-printf "\n\n [×] Metasploit is not installed\n\n"
-printf "\033[92m [+] Now Installing metasploit\n"
+printf "\n\n \033[91m [×] Metasploit is not installed\n\n"
+printf "\033[92m [+] Press enter to install metasploit\n"
+read
 cd ~
 curl -LO https://github.com/termux/termux-packages/files/3995119/metasploit_5.0.65-1_all.deb.gz
 gunzip metasploit_5.0.65-1_all.deb.gz
