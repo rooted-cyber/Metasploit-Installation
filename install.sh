@@ -66,6 +66,14 @@ printf "2 O 2 O || 2 O 2 O || 2 O 2 O || 2 O 2 O\n"|lolcat
 printf "Happy new year 🎉🎈🎈🎈🎈\n\n"|lolcat
 
 }
+fixing () {
+clear
+printf "\n\n \033[92m [+] Fixing error !!\n\n"
+apt --fix-broken install
+dpkg --configure -a
+clear
+msfconsole
+}
 Happy
 printf "Press enter to install metasploit "|lolcat
 read
@@ -78,7 +86,8 @@ sleep 1
 cd $PREFIX/bin
 if [ -e msfconsole ];then
 printf "\n\n\033[92m [√] Metasploit is already installed !!\n\n"
-exit 0
+printf "\n \033[91m [×] If any error type\033[92m Y\033[91m or Not error type \033[92m N "
+fixing
 else
 printf "\n\n [×] Metasploit is not installed\n\n"
 printf "\033[92m [+] Now Installing metasploit\n"
@@ -89,6 +98,7 @@ dpkg -i metasploit_5.0.65-1_all.deb
 apt -f install
 pkg install metasploit
 apt --fix-broken install
+dpkg --configure -a
 clear
 fi
 rep
@@ -100,6 +110,7 @@ dpkg -i metasploit_5.0.65-1_all.deb
 apt -f install
 pkg install metasploit
 apt --fix-broken install
+dpkg --configure -a
 clear
 rep
 }
