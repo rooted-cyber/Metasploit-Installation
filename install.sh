@@ -1,3 +1,4 @@
+#!/bin/sh
 cd $PREFIX/bin
 if [ -e figlet ];then
 echo
@@ -74,6 +75,16 @@ dpkg --configure -a
 clear
 msfconsole
 }
+ask () {
+	printf "\n\n\033[92m [√] Metasploit is already installed !!\n\n"
+	printf "\n \033[91m [×] If any error type\033[92m Y\033[91m or Not error type \033[92m N "
+	read df
+	case $df in
+	y|Y)fixing ;;
+	n|N)exit ;;
+	*)ask ;;
+	esac
+	}
 clear
 figlet Metasploit | toilet -f term -F gay
 figlet Installation | toilet -f term -F gay
@@ -82,9 +93,7 @@ printf "\n \033[96m [-] Checking Metasploit installation !!\n"
 sleep 1
 cd $PREFIX/bin
 if [ -e msfconsole ];then
-printf "\n\n\033[92m [√] Metasploit is already installed !!\n\n"
-printf "\n \033[91m [×] If any error type\033[92m Y\033[91m or Not error type \033[92m N "
-fixing
+ask
 else
 printf "\n\n \033[91m [×] Metasploit is not installed\n\n"
 printf "\033[92m [+] Press enter to install metasploit\n"
