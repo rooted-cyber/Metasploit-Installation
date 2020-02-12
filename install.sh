@@ -1,4 +1,4 @@
-#!/bin/sh
+
 cd $PREFIX/bin
 if [ -e figlet ];then
 echo
@@ -15,9 +15,6 @@ fi
 cd $PREFIX/bin
 if [ -e cowsay ];then
 echo
-else
-pkg install cowsay
-clear
 fi
 if [ -e toilet ];then
 echo
