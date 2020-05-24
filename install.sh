@@ -167,12 +167,30 @@ case $b in
 *)main ;;
 esac
 }
+ask2 () {
+	printf "\n\n\033[92m [√] Metasploit is installed !!\n\n"
+	printf "\n \033[91m [×] If any error type\033[92m Y\033[91m or Not error type \033[92m N "
+	read df
+	case $df in
+	y|Y)fixing ;;
+	n|N)exit ;;
+	*)ask ;;
+	esac
+	}
 sh-install () {
 	clear
 	printf "\n\033[92m installing Metasploit....\n"
 	pkg install unstable-repo
 	pkg install metasploit
-	msfconsole
+	printf "\n Checking… \n"
+	cd $PREFIX/bin
+	if [ -e msfvenom ];then
+	ask2
+	else
+	dpkg --configure -a
+	apt --fix-broken install
+	sh-install
+	fi
 	}
 	main
 
