@@ -1,21 +1,30 @@
-# Installation Metasploit in termux
+ # Contact :
+ 
+ ## Facebook ID : <b>www.facebook.com/maruf.alam.94043626</b>
+ 
+ ## Facebook page : <b>www.facebook.com/rootedcyber</b>
+ 
+ ## Instagram ID :<b>www.instagram.com/rootedcyber</b>
 
-## Re-Open Whatsapp Group : https://chat.whatsapp.com/JH8SqlhcIeX0IeC1t2RWmu
+ ## Telegram 1st Bot ;<b>https://t.me/rootedcybe_bot</b>
+ 
+ ## Re-Open Whatsapp Group : https://chat.whatsapp.com/JH8SqlhcIeX0IeC1t2RWmu
+ 
+ ## Telegram 2nd Bot;<b>https://t.me/rootedcyber3_bot</b>
+ 
 
-## Telegram Group : https://t.me/rootedcyber1
-<iMg src="https://github.com/rooted-cyber/image-upload/raw/master/images(3).png" style="width:300px;height:400px;">
-<br />
-<pre> $ apt update
+
+<img src="https://github.com/rooted-cyber/Random-Theme/raw/main/images/randvom-theme.png" style="width:300px;height:400px;">
+<img src="https://github.com/rooted-cyber/Random-Theme/raw/main/images/ranbdom2.png" style="width:300px;height:400px;">
+
+<pre>
+ $ apt update
  $ apt upgrade
- $ apt install figlet
- $ apt install toilet
- $ apt install curl
- $ apt install python
- $ apt install cowsay
- $ pip install lolcat
  $ apt install git
- $ git clone https://github.com/rooted-cyber/Metasploit-Installation
+ $ cd $HOME
+ $ git clone http://github.com/rooted-cyber/Metasploit-Installation
  $ cd Metasploit-Installation
- $ bash install.sh
- </pre>
+ $ termux-setup-storage
+ $ bash setup.sh
+ $ bash metasploit.sh</pre>
  
