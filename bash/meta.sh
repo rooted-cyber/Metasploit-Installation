@@ -43,3 +43,18 @@ fix() {
 cd ~/Metasploit-Installation/javascript
 node color.js
 node complete.js
+chmsf() {
+	if [ -e $PREFIX/bin/msfconsole ];then
+	echo
+	else
+	cd $PREFIX/bin
+	echo "#!/data/data/com.termux/files/usr/bin/sh" >> msfconsole
+	echo "cd ~/metasploit*/metasploit*;./msfconsole" >> msfconsole
+	chmod 700 msfconsole
+	echo "#!/data/data/com.termux/files/usr/bin/sh" >> msfvenom
+	echo "cd ~/metasploit*/metasploit*;./msfvenom" >> msfvenom
+	chmod 700 msfvenom
+	fi
+	}
+	chmsf
+	
