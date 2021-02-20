@@ -15,6 +15,7 @@ fol() {
 					}
 					meta() {
 						cd ~/Metasploit-Installation/bash
+						printf "\n\033[1;92m Please wait ..\n"
 						bash meta.sh
 						}
 						about() {
