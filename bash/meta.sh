@@ -40,6 +40,7 @@ fix() {
 	python fix.py
 	}
 	fix
+	bundle update
 cd ~/Metasploit-Installation/javascript
 node color.js
 node complete.js
