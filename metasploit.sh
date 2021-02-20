@@ -22,6 +22,7 @@ fol() {
 							node about.js
 							}
 					banner() {
+						clear
 						fol
 						node banner.js
 						folp
@@ -30,7 +31,6 @@ fol() {
 						menu () {
 							banner
 							folpy
-							cd python
 							python menu.py
 							echo -e -n "\033[1;92m Metasploit\033[1;96m >>\033[0m "
 							read ab
