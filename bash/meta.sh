@@ -29,7 +29,7 @@ ruby-i() {
 	}
 	ruby-i
 ins() {
-	cd $HOME/metasploit-framework
+	cd $HOME/metasploit-framework/metas*
 	bundle config build.nokogiri --use-system-libraries
 	bundle update
 	}
@@ -40,7 +40,6 @@ fix() {
 	python fix.py
 	}
 	fix
-	bundle update
 cd ~/Metasploit-Installation/javascript
 node color.js
 node complete.js
