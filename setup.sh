@@ -3,7 +3,7 @@ set() {
 	printf "\n\033[1;92m Updating packages..\n"
 	apt update
 	apt upgrade
-	for a in php node npm nodejs python toilet figlet ; do
+	for a in php node npm nodejs python toilet figlet ruby ; do
 	if [ -e $PREFIX/bin/$a ];then
 	printf "\n \033[1;93m $a command is install\n\n\033[0m"
 	sleep 1
