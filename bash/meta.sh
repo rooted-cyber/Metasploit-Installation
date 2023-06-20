@@ -1,5 +1,5 @@
-find $HOME -name "metasploit-*" -type d -exec rm -rf {} \;
-find $PREFIX -name "metasploit-*" -type d -exec rm -rf {} \;
+#find $HOME -name "metasploit-*" -type d -exec rm -rf {} \;
+#find $PREFIX -name "metasploit-*" -type d -exec rm -rf {} \;
 meta() {
 	cd ~/Metasploit-Installation/bash
 	bash package.sh
