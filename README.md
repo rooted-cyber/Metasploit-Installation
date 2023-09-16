@@ -8,9 +8,7 @@
 
  ## Telegram 1st Bot ;<b>https://t.me/rootedcybe_bot</b>
  
- ## Re-Open Whatsapp Group : https://chat.whatsapp.com/JH8SqlhcIeX0IeC1t2RWmu
- 
- ## Telegram 2nd Bot;<b>https://t.me/rootedcyber3_bot</b>
+ ## Re-Open channel tg://join?invite=FsRZ3UVhQ782MzY9
  
 
 
