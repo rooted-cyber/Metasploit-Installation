@@ -8,12 +8,11 @@
 
  ## Telegram 1st Bot ;<b>https://t.me/rootedcybe_bot</b>
  
- ## Re-Open channel tg://join?invite=FsRZ3UVhQ782MzY9
+ ## Re-Open channel 
+ ```
+tg://join?invite=FsRZ3UVhQ782MzY9
+```
  
-
-
-<img src="https://github.com/rooted-cyber/Random-Theme/raw/main/images/randvom-theme.png" style="width:300px;height:400px;">
-<img src="https://github.com/rooted-cyber/Random-Theme/raw/main/images/ranbdom2.png" style="width:300px;height:400px;">
 
 <pre>
  $ apt update
